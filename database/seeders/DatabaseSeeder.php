@@ -17,14 +17,24 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        $this->call([
-            RoleSeeder::class,
-            PermissionSeeder::class,
-            UserSeeder::class,
-            KategoriPemasukanSeeder::class,
-            KategoriPengeluaranSeeder::class,
-            PemasukanSeeder::class,
-            PengeluaranSeeder::class,
-        ]);
+        $this->call(\Database\Seeders\Tables\ActivityLogSeeder::class);
+        $this->call(\Database\Seeders\Tables\CacheLocksSeeder::class);
+        $this->call(\Database\Seeders\Tables\JobBatchesSeeder::class);
+        $this->call(\Database\Seeders\Tables\KategoriPemasukanSeeder::class);
+        $this->call(\Database\Seeders\Tables\KategoriPengeluaranSeeder::class);
+        $this->call(\Database\Seeders\Tables\ModelHasPermissionsSeeder::class);
+        $this->call(\Database\Seeders\Tables\ModelHasRolesSeeder::class);
+        $this->call(\Database\Seeders\Tables\OauthAccessTokensSeeder::class);
+        $this->call(\Database\Seeders\Tables\OauthAuthCodesSeeder::class);
+        $this->call(\Database\Seeders\Tables\OauthClientsSeeder::class);
+        $this->call(\Database\Seeders\Tables\OauthDeviceCodesSeeder::class);
+        $this->call(\Database\Seeders\Tables\OauthRefreshTokensSeeder::class);
+        $this->call(\Database\Seeders\Tables\PasswordResetTokensSeeder::class);
+        $this->call(\Database\Seeders\Tables\PemasukanSeeder::class);
+        $this->call(\Database\Seeders\Tables\PengeluaranSeeder::class);
+        $this->call(\Database\Seeders\Tables\PermissionsSeeder::class);
+        $this->call(\Database\Seeders\Tables\RoleHasPermissionsSeeder::class);
+        $this->call(\Database\Seeders\Tables\RolesSeeder::class);
+        $this->call(\Database\Seeders\Tables\UsersSeeder::class);
     }
 }

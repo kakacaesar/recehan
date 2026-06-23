@@ -13,8 +13,10 @@
         "laravel/framework": "^13.8",
         "laravel/passport": "^13.7",
         "laravel/tinker": "^3.0",
+        "orangehill/iseed": "^3.8",
         "spatie/laravel-activitylog": "^5.0",
-        "spatie/laravel-permission": "^7.0"
+        "spatie/laravel-permission": "^7.0",
+        "tyghaykal/laravel-seed-generator": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
